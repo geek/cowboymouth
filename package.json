@@ -19,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/geek/cowboymouth/issues"
   },
-  "homepage": "https://github.com/geek/cowboymouth"
+  "homepage": "https://github.com/geek/cowboymouth",
+  "devDependencies": {
+    "code": "^1.2.1",
+    "lab": "^5.1.0"
+  },
+  "dependencies": {
+    "hoek": "^2.9.0",
+    "sensors": "^0.1.0"
+  }
 }
