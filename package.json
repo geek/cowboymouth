@@ -1,6 +1,6 @@
 {
   "name": "cowboymouth",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Handles any stream communication with sensor gateway",
   "main": "index.js",
   "scripts": {
