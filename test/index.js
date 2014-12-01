@@ -21,9 +21,9 @@ describe('Cowboy Mouth', function () {
         var stream = new Stream.PassThrough();
 
         var mouth = new Mouth(stream);
-        mouth.on('sensor', function (data) {
+        mouth.on('addon', function (data) {
 
-            expect(data.radioId).to.equal('12');
+            expect(data.boardId).to.equal('12');
             done();
         });
 
