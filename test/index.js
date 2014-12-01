@@ -68,6 +68,23 @@ describe('Cowboy Mouth', function () {
         stream.write('1;3;1;0;16;1\n');
     });
 
+    it('converts addon data to a friendly reading when movement stops', function (done) {
+
+        var stream = new Stream.PassThrough();
+
+        var mouth = new Mouth(stream);
+        mouth.once('reading', function (reading) {
+
+            expect(reading.boardId).to.equal(1);
+            expect(reading.value).to.equal(false);
+            expect(reading.type).to.equal('movement');
+            expect(reading.time).to.exist();
+            done();
+        });
+
+        stream.write('1;3;1;0;16;0\n');
+    });
+
     it('emits battery level', function (done) {
 
         var stream = new Stream.PassThrough();
