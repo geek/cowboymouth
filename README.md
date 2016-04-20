@@ -26,16 +26,19 @@ to an arduino gateway.  Used for reading and writing data to the mysensor gatewa
 
 - `addon` - emits addon object when an addon registers itself with the gateway.  The signature is `function (addon)`
     An `addon` object has the following structure:
-    ```
+
+    ```js
     {
         "boardId": int,
         "addonId": int,
         "type": string,
     }
     ```
+    
 - `log` - emits when a board sends a message to log.  The signature is `function (log)`
     A `log` object has the following structure:
-    ```
+
+    ```js
     {
         "boardId": int,
         "message": string,
@@ -45,7 +48,8 @@ to an arduino gateway.  Used for reading and writing data to the mysensor gatewa
 
 - `name` - emits when a board sends the sketch name.  The signature is `function (sketch)`
     A `sketch` object has the following structure:
-    ```
+
+    ```js
     {
         "boardId": int,
         "name": string
@@ -54,7 +58,8 @@ to an arduino gateway.  Used for reading and writing data to the mysensor gatewa
 
 - `version` - emits when a board sends the sketch version.  The signature is `function (version)`
     A `version` object has the following structure:
-    ```
+
+    ```js
     {
         "boardId": int,
         "version": string
@@ -63,7 +68,8 @@ to an arduino gateway.  Used for reading and writing data to the mysensor gatewa
 
 - `battery` - emits when a board sends a battery level.  The signature is `function (battery)`
     A `battery` object has the following structure:
-    ```
+
+    ```js
     {
         "boardId": int,
         "level": float
@@ -73,7 +79,8 @@ to an arduino gateway.  Used for reading and writing data to the mysensor gatewa
 - `protocol` - emits when the gateway records the protocol type.  The signature is `function (protocol)`
 - `reading` - emits when a sensor sends data to the gateway.  The signature is `function (reading)`
     A `reading` object has the following structure:
-    ```
+
+    ```js
     {
         "boardId": int,
         "addonId": int,
